@@ -2,33 +2,33 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /* Asegura que los padding y márgenes no afecten el tamaño de los elementos */
+    box-sizing: border-box;
 }
 
 /* Estilo para el contenedor del carrusel */
 .carousel-container {
     width: 100%; /* Hace que el carrusel ocupe todo el ancho de la pantalla */
-    overflow: hidden; /* Oculta las imágenes que se salen del contenedor */
+    overflow: hidden;
     position: relative;
 }
 
 /* Estilo para el carrusel en sí */
 .carousel {
-    display: flex; /* Para que las imágenes estén en fila */
-    transition: transform 0.5s ease; /* Transición suave para el movimiento de las imágenes */
-    width: 100%; /* Ajustamos el carrusel para que ocupe solo el 100% del contenedor */
+    display: flex;
+    transition: transform 0.5s ease;
+    width: 100%;
 }
 
 /* Estilo para cada imagen dentro del carrusel */
 .carousel img {
-    width: 100%; /* Cada imagen ocupa el 100% del ancho del carrusel */
-    height: auto; /* Mantiene la proporción de la imagen */
-    object-fit: cover; /* Asegura que la imagen cubra el espacio sin deformarse */
+    width: 100%;
+    height: auto;
+    object-fit: cover;
 }
 
 /* Estilo para la barra de navegación */
 .navbar {
-    background-color: #FF495C;
+    background-color: #FF6B81; /* Color complementario para el navbar */
     color: white;
     padding: 10px;
 }
@@ -56,16 +56,17 @@
     display: flex;
     justify-content: space-between;
     padding: 15px;
-    background-color: #FF5566;
+    background-color: #FF495C; /* Color principal del header */
 }
 
 .header .logo h1 {
     margin: 0;
+    color: white; /* Blanco para el texto del logo */
 }
 
 .header .profile a {
     text-decoration: none;
-    color: #333;
+    color: white;
 }
 
 /* Estilo de la sección de información */
