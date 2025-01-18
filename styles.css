@@ -1,86 +1,70 @@
-/* Reseteo de márgenes y padding */
-* {
+/* General */
+body {
     margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    background-color: #121212; /* Fondo oscuro general */
+    color: #EAEAEA; /* Color del texto general */
 }
 
-/* Estilo para la barra superior */
+/* Header */
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    background-color: #FF495C;
+    background-color: #FF495C; /* Color del encabezado */
     color: white;
 }
 
 .header .logo h1 {
+    margin: 0;
     font-size: 1.5rem;
+}
+
+.header .profile a {
+    color: white;
+    text-decoration: none;
     font-weight: bold;
 }
 
-.header .profile img {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 2px solid white;
-    transition: transform 0.3s ease;
-}
-
-.header .profile img:hover {
-    transform: scale(1.1);
-    opacity: 0.9;
-}
-
-/* Estilo de la barra de navegación */
+/* Navbar */
 .navbar {
-    background-color: #FF6B81;
-    color: white;
-    padding: 10px;
-}
-
-.navbar ul {
-    list-style: none;
+    background-color: #333333; /* Fondo del navbar */
+    padding: 10px 20px;
     display: flex;
     justify-content: flex-end;
     gap: 20px;
-    margin: 0;
 }
 
-.navbar li a {
-    color: white;
+.navbar a {
+    color: #EAEAEA;
     text-decoration: none;
-    font-style: italic;
-    font-weight: bold;
-    font-size: 1rem;
-    padding: 5px 10px;
-    border-radius: 5px;
-    transition: all 0.3s ease;
+    font-style: italic; /* Cursiva para los enlaces */
+    transition: color 0.3s;
 }
 
-.navbar li a:hover {
-    color: #FFBABA;
-    transform: scale(1.05);
+.navbar a:hover {
+    color: #FFD700; /* Dorado al pasar el mouse */
 }
 
 /* Carrusel */
 .carousel-container {
-    width: 100%;
     overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 400px;
     margin-top: 20px;
 }
 
 .carousel {
     display: flex;
     transition: transform 0.5s ease-in-out;
-    width: 300%; /* Ajustado para múltiples imágenes */
+    width: 300%; /* Para asegurar que todas las imágenes estén en línea */
 }
 
 .carousel img {
     width: 100%;
-    flex-shrink: 0;
+    height: 400px;
     object-fit: cover;
 }
 
@@ -106,6 +90,7 @@
     font-size: 2rem;
     margin-bottom: 20px;
     font-weight: bold;
+    color: #FFD700; /* Dorado para resaltar */
 }
 
 .main-content .text p {
@@ -117,6 +102,9 @@
 .main-content .image {
     flex: 1;
     min-width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .main-content .image img {
@@ -126,10 +114,11 @@
     border: 2px solid #444; /* Borde gris oscuro */
 }
 
-/* Pie de página */
+/* Footer */
 .footer {
+    background-color: #2E2E2E; /* Fondo del pie de página */
     text-align: center;
-    padding: 15px;
-    background-color: #222;
-    color: white;
+    padding: 10px 0;
+    margin-top: 20px;
+    color: #EAEAEA;
 }
