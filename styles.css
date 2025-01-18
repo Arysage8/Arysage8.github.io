@@ -49,13 +49,15 @@
 .navbar ul {
     list-style: none;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end; /* Alinea los elementos a la derecha */
     gap: 20px;
+    margin: 0;
 }
 
 .navbar li a {
     color: white;
     text-decoration: none;
+    font-style: italic; /* Cambia el texto a cursiva */
     font-weight: bold;
     font-size: 1rem;
     padding: 5px 10px;
@@ -64,9 +66,8 @@
 }
 
 .navbar li a:hover {
-    background-color: #FF495C;
-    color: #FFF;
-    transform: scale(1.1);
+    color: #FFBABA; /* Cambia el color del texto al pasar el mouse */
+    transform: scale(1.05);
 }
 
 /* Carrusel */
