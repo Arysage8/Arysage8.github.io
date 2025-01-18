@@ -81,14 +81,6 @@
     color: #FF495C;
 }
 
-/* Estilo del contenido principal */
-.main-content {
-    background-color: #2C2F33;
-    color: white;
-    padding: 20px;
-    min-height: calc(100vh - 150px); /* Esto asegura que el contenido ocupe toda la pantalla menos el header y el footer */
-}
-
 /* Pie de página */
 .footer {
     background-color: #333;
