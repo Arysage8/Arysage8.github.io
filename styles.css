@@ -16,12 +16,12 @@
 .carousel {
     display: flex; /* Para que las imágenes estén en fila */
     transition: transform 0.5s ease; /* Transición suave para el movimiento de las imágenes */
-    width: 300%; /* Hace que las 3 imágenes se ubiquen una al lado de la otra */
+    width: 100%; /* Ajustamos el carrusel para que ocupe solo el 100% del contenedor */
 }
 
 /* Estilo para cada imagen dentro del carrusel */
 .carousel img {
-    width: 100%; /* Hace que cada imagen ocupe el 100% del ancho del contenedor */
+    width: 100%; /* Cada imagen ocupa el 100% del ancho del carrusel */
     height: auto; /* Mantiene la proporción de la imagen */
     object-fit: cover; /* Asegura que la imagen cubra el espacio sin deformarse */
 }
