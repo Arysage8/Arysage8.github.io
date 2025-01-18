@@ -28,8 +28,8 @@
 
 /* Estilo para la barra de navegación */
 .navbar {
-    background-color: #FF6B81; /* Color complementario para el navbar */
-    color: white;
+    background-color: #FF6B81 !important; /* Color complementario para el navbar */
+    color: white !important;
     padding: 10px;
 }
 
@@ -46,7 +46,7 @@
 }
 
 .navbar a {
-    color: white;
+    color: white !important; /* Prioridad más alta para asegurarse que los enlaces sean blancos */
     text-decoration: none;
     font-weight: bold;
 }
@@ -56,17 +56,17 @@
     display: flex;
     justify-content: space-between;
     padding: 15px;
-    background-color: #FF495C; /* Color principal del header */
+    background-color: #FF495C !important; /* Color principal del header */
 }
 
 .header .logo h1 {
     margin: 0;
-    color: white; /* Blanco para el texto del logo */
+    color: white !important; /* Blanco para el texto del logo */
 }
 
 .header .profile a {
     text-decoration: none;
-    color: white;
+    color: white !important;
 }
 
 /* Estilo de la sección de información */
