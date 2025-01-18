@@ -5,71 +5,85 @@
     box-sizing: border-box;
 }
 
-/* Estilo para el contenedor del carrusel */
-.carousel-container {
-    width: 100%; /* Hace que el carrusel ocupe todo el ancho de la pantalla */
-    overflow: hidden;
-    position: relative;
-}
-
-/* Estilo para el carrusel en sí */
-.carousel {
+/* Estilo para la barra superior */
+.header {
     display: flex;
-    transition: transform 0.5s ease;
-    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #FF495C;
+    color: white;
 }
 
-/* Estilo para cada imagen dentro del carrusel */
-.carousel img {
-    width: 100%;
-    height: auto;
+.header .logo h1 {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.header .profile {
+    position: relative;
+    cursor: pointer;
+}
+
+.header .profile img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
     object-fit: cover;
+    border: 2px solid white;
 }
 
-/* Estilo para la barra de navegación */
+.profile-label:hover {
+    opacity: 0.8;
+}
+
+/* Estilo de la barra de navegación */
 .navbar {
-    background-color: #FF6B81 !important; /* Color complementario para el navbar */
-    color: white !important;
+    background-color: #FF6B81;
+    color: white;
     padding: 10px;
 }
 
 .navbar ul {
     list-style: none;
-    padding: 0;
-    margin: 0;
     display: flex;
     justify-content: center;
+    gap: 20px;
 }
 
-.navbar li {
-    margin: 0 15px;
-}
-
-.navbar a {
-    color: white !important; /* Prioridad más alta para asegurarse que los enlaces sean blancos */
+.navbar li a {
+    color: white;
     text-decoration: none;
     font-weight: bold;
+    font-size: 1rem;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
 }
 
-/* Estilo de la barra superior */
-.header {
+.navbar li a:hover {
+    background-color: #FF495C;
+    color: #FFF;
+    transform: scale(1.1);
+}
+
+/* Carrusel */
+.carousel-container {
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel {
     display: flex;
-    justify-content: space-between;
-    padding: 15px;
-    background-color: #FF495C !important; /* Color principal del header */
+    transition: transform 0.5s ease;
 }
 
-.header .logo h1 {
-    margin: 0;
-    color: white !important; /* Blanco para el texto del logo */
+.carousel img {
+    width: 100%;
+    object-fit: cover;
 }
 
-.header .profile a {
-    text-decoration: none;
-    color: white !important;
-}
-
-/* Estilo de la sección de información */
+/* Contenido Principal */
 .main-content {
     padding: 20px;
     background-color: #f9f9f9;
@@ -79,7 +93,7 @@
     text-align: center;
 }
 
-/* Estilo del pie de página */
+/* Pie de página */
 .footer {
     text-align: center;
     padding: 15px;
