@@ -1,56 +1,88 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Página de Métodos de Pago</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+/* Reseteo de márgenes y padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-    <!-- Barra superior con el nombre de la página y acceso al perfil -->
-    <header class="header">
-        <div class="logo">
-            <h1>Mi Página de Pagos</h1>
-        </div>
-        <div class="profile">
-            <a href="#">Perfil</a>
-        </div>
-    </header>
+/* Estilo para el contenedor del carrusel */
+.carousel-container {
+    width: 100%; /* Hace que el carrusel ocupe todo el ancho de la pantalla */
+    overflow: hidden;
+    position: relative;
+}
 
-    <!-- Barra de navegación -->
-    <nav class="navbar">
-        <ul>
-            <li><a href="#">Inicio</a></li>
-            <li><a href="#">Métodos de Pago</a></li>
-            <li><a href="#">Ayuda</a></li>
-        </ul>
-    </nav>
+/* Estilo para el carrusel en sí */
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease;
+    width: 100%;
+}
 
-    <!-- Carrusel -->
-    <div class="carousel-container">
-        <div class="carousel">
-            <img src="images/imagen1.jpg" alt="Imagen 1">
-            <img src="images/imagen2.jpg" alt="Imagen 2">
-            <img src="images/imagen3.jpg" alt="Imagen 3">
-        </div>
-    </div>
+/* Estilo para cada imagen dentro del carrusel */
+.carousel img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
 
-    <!-- Contenido Principal -->
-    <main class="main-content">
-        <section class="info">
-            <h2>Bienvenido a nuestra página de métodos de pago</h2>
-            <p>Aquí podrás conocer y simular diferentes métodos de pago para tus compras en línea.</p>
-            <!-- Puedes agregar más información aquí -->
-        </section>
-    </main>
+/* Estilo para la barra de navegación */
+.navbar {
+    background-color: #FF6B81 !important; /* Color complementario para el navbar */
+    color: white !important;
+    padding: 10px;
+}
 
-    <!-- Pie de página -->
-    <footer class="footer">
-        <p>© 2025 Mi Página de Pagos. Todos los derechos reservados.</p>
-    </footer>
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
 
-    <script src="script.js"></script>
-</body>
-</html>
+.navbar li {
+    margin: 0 15px;
+}
+
+.navbar a {
+    color: white !important; /* Prioridad más alta para asegurarse que los enlaces sean blancos */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Estilo de la barra superior */
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    background-color: #FF495C !important; /* Color principal del header */
+}
+
+.header .logo h1 {
+    margin: 0;
+    color: white !important; /* Blanco para el texto del logo */
+}
+
+.header .profile a {
+    text-decoration: none;
+    color: white !important;
+}
+
+/* Estilo de la sección de información */
+.main-content {
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.info {
+    text-align: center;
+}
+
+/* Estilo del pie de página */
+.footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #333;
+    color: white;
+}
