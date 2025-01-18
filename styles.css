@@ -1,10 +1,17 @@
+/* Reseteo básico para asegurarnos de que no haya márgenes ni rellenos indeseados */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 /* Carrusel */
 .carousel-container {
     overflow: hidden;
     position: relative;
     width: 100%;
+    height: 400px; /* Ajustamos la altura */
     max-width: 1200px; /* Tamaño máximo */
-    height: 300px;
     margin-top: 20px;
     margin-left: auto;
     margin-right: auto; /* Centra el carrusel */
@@ -79,11 +86,7 @@
     background-color: #2C2F33;
     color: white;
     padding: 20px;
-}
-
-.info {
-    text-align: center;
-    font-size: 1.2em;
+    min-height: calc(100vh - 150px); /* Esto asegura que el contenido ocupe toda la pantalla menos el header y el footer */
 }
 
 /* Pie de página */
