@@ -20,9 +20,9 @@
 
 .carousel img {
     flex-shrink: 0;
-    width: 33.33%; /* Cada imagen ocupará un tercio del carrusel */
+    width: 100%; /* Cada imagen ocupa todo el ancho del contenedor */
     height: 100%; /* Asegura que las imágenes no se desborden */
-    object-fit: cover;
+    object-fit: cover; /* Las imágenes cubrirán el área sin distorsionarse */
 }
 
 /* Barra superior */
