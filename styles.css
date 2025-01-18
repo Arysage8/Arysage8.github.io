@@ -21,7 +21,7 @@
 .carousel img {
     flex-shrink: 0;
     width: 33.33%; /* Cada imagen ocupará un tercio del carrusel */
-    height: 300px;
+    height: 100%; /* Asegura que las imágenes no se desborden */
     object-fit: cover;
 }
 
@@ -85,14 +85,17 @@
     display: flex;
     justify-content: space-between;
     margin-top: 20px;
+    gap: 20px; /* Espacio entre las columnas */
 }
 
 .column {
-    width: 48%;
+    flex: 1;
+    padding: 10px;
 }
 
 .column img {
     width: 100%;
+    height: auto;
     border-radius: 8px;
 }
 
