@@ -1,3 +1,10 @@
+/* Reseteo de márgenes y padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Asegura que los padding y márgenes no afecten el tamaño de los elementos */
+}
+
 /* Estilo para el contenedor del carrusel */
 .carousel-container {
     width: 100%; /* Hace que el carrusel ocupe todo el ancho de la pantalla */
@@ -9,6 +16,7 @@
 .carousel {
     display: flex; /* Para que las imágenes estén en fila */
     transition: transform 0.5s ease; /* Transición suave para el movimiento de las imágenes */
+    width: 300%; /* Hace que las 3 imágenes se ubiquen una al lado de la otra */
 }
 
 /* Estilo para cada imagen dentro del carrusel */
