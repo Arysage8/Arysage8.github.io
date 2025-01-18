@@ -75,6 +75,7 @@
 .carousel {
     display: flex;
     transition: transform 0.5s ease-in-out;
+    width: 300%; /* Ajustado para múltiples imágenes */
 }
 
 .carousel img {
