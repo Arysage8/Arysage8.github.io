@@ -1,64 +1,15 @@
-/* General */
-body {
-    margin: 0;
-    font-family: 'Roboto', sans-serif;
-    background-color: #121212; /* Fondo oscuro general */
-    color: #EAEAEA; /* Color del texto general */
-}
-
-/* Header */
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    background-color: #FF495C; /* Color del encabezado */
-    color: white;
-}
-
-.header .logo h1 {
-    margin: 0;
-    font-size: 1.5rem;
-}
-
-.header .profile a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-/* Navbar */
-.navbar {
-    background-color: #333333; /* Fondo del navbar */
-    padding: 10px 20px;
-    display: flex;
-    justify-content: flex-end;
-    gap: 20px;
-}
-
-.navbar a {
-    color: #EAEAEA;
-    text-decoration: none;
-    font-style: italic; /* Cursiva para los enlaces */
-    transition: color 0.3s;
-}
-
-.navbar a:hover {
-    color: #FFD700; /* Dorado al pasar el mouse */
-}
-
 /* Carrusel */
 .carousel-container {
-    overflow: hidden; /* Oculta las imágenes fuera de los límites */
+    overflow: hidden;
     position: relative;
     width: 100%;
-    max-width: 1200px; /* Tamaño máximo para el carrusel */
-    height: 300px; /* Altura fija, ajustada para hacerlo más compacto */
+    max-width: 1200px; /* Tamaño máximo */
+    height: 300px;
     margin-top: 20px;
     margin-left: auto;
     margin-right: auto; /* Centra el carrusel */
-    border-radius: 10px; /* Bordes redondeados */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Sombra */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 
 .carousel {
@@ -68,64 +19,87 @@ body {
 }
 
 .carousel img {
-    flex-shrink: 0; /* Evita que las imágenes se reduzcan */
-    width: 33.33%; /* Cada imagen ocupará un tercio del ancho del carrusel */
-    height: 300px; /* Altura fija para evitar desajustes */
-    object-fit: cover; /* Ajusta la imagen sin distorsionarla */
+    flex-shrink: 0;
+    width: 33.33%; /* Cada imagen ocupará un tercio del carrusel */
+    height: 300px;
+    object-fit: cover;
 }
 
-
-/* Contenido Principal */
-.main-content {
-    padding: 40px 20px;
-    background: linear-gradient(to right, #2E2E2E, #1C1C1C); /* Fondo degradado gris oscuro */
-    color: #EAEAEA; /* Texto en gris claro */
+/* Barra superior */
+.header {
+    background-color: #FF495C;
+    padding: 15px 20px;
     display: flex;
     justify-content: space-between;
-    gap: 20px;
-    flex-wrap: wrap; /* Ajusta en pantallas pequeñas */
-    border-radius: 10px; /* Bordes suaves */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Sombra para mayor profundidad */
-}
-
-.main-content .text {
-    flex: 1;
-    min-width: 300px;
-}
-
-.main-content .text h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-    font-weight: bold;
-    color: #FFD700; /* Dorado para resaltar */
-}
-
-.main-content .text p {
-    font-size: 1rem;
-    line-height: 1.5;
-    color: #EAEAEA; /* Mantén el texto legible en gris claro */
-}
-
-.main-content .image {
-    flex: 1;
-    min-width: 300px;
-    display: flex;
-    justify-content: center;
     align-items: center;
+    color: white;
 }
 
-.main-content .image img {
-    width: 100%;
-    border-radius: 10px;
-    object-fit: cover;
-    border: 2px solid #444; /* Borde gris oscuro */
+.logo h1 {
+    margin: 0;
+    font-size: 1.5em;
 }
 
-/* Footer */
-.footer {
-    background-color: #2E2E2E; /* Fondo del pie de página */
-    text-align: center;
-    padding: 10px 0;
+.profile a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Barra de navegación */
+.navbar {
+    background-color: #F77F7F;
+    padding: 10px;
+    text-align: right;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-style: italic;
+}
+
+.navbar a:hover {
+    color: #FF495C;
+}
+
+/* Estilo del contenido principal */
+.main-content {
+    background-color: #2C2F33;
+    color: white;
+    padding: 20px;
+}
+
+.content-example {
+    display: flex;
+    justify-content: space-between;
     margin-top: 20px;
-    color: #EAEAEA;
+}
+
+.column {
+    width: 48%;
+}
+
+.column img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+/* Pie de página */
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
 }
