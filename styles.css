@@ -1,87 +1,79 @@
-/* General */
-body {
-    font-family: 'Roboto', sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    background-color: #f9f9f9;
+/* Estilo para el contenedor del carrusel */
+.carousel-container {
+    width: 100%; /* Hace que el carrusel ocupe todo el ancho de la pantalla */
+    overflow: hidden; /* Oculta las imágenes que se salen del contenedor */
+    position: relative;
 }
 
-header {
+/* Estilo para el carrusel en sí */
+.carousel {
+    display: flex; /* Para que las imágenes estén en fila */
+    transition: transform 0.5s ease; /* Transición suave para el movimiento de las imágenes */
+}
+
+/* Estilo para cada imagen dentro del carrusel */
+.carousel img {
+    width: 100%; /* Hace que cada imagen ocupe el 100% del ancho del contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    object-fit: cover; /* Asegura que la imagen cubra el espacio sin deformarse */
+}
+
+/* Estilo para la barra de navegación */
+.navbar {
     background-color: #333;
     color: white;
-    padding: 10px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    padding: 10px;
 }
 
-header .logo h1 {
+.navbar ul {
+    list-style: none;
+    padding: 0;
     margin: 0;
-    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
 }
 
-header .profile a {
+.navbar li {
+    margin: 0 15px;
+}
+
+.navbar a {
     color: white;
     text-decoration: none;
     font-weight: bold;
 }
 
-.navbar {
-    background-color: #444;
-    padding: 10px 0;
-    text-align: center;
-}
-
-.navbar ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-.navbar ul li {
-    display: inline;
-    margin: 0 15px;
-}
-
-.navbar ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 1.1rem;
-}
-
-.carousel-container {
-    width: 100%;
-    overflow: hidden;
-    position: relative;
-}
-
-.carousel {
+/* Estilo de la barra superior */
+.header {
     display: flex;
-    transition: transform 1s ease-in-out;
+    justify-content: space-between;
+    padding: 15px;
+    background-color: #f4f4f4;
 }
 
-.carousel img {
-    width: 100%;
-    height: auto;
+.header .logo h1 {
+    margin: 0;
 }
 
+.header .profile a {
+    text-decoration: none;
+    color: #333;
+}
+
+/* Estilo de la sección de información */
 .main-content {
     padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.info {
     text-align: center;
 }
 
-.main-content .info h2 {
-    font-size: 2rem;
-    margin-bottom: 10px;
-}
-
+/* Estilo del pie de página */
 .footer {
+    text-align: center;
+    padding: 15px;
     background-color: #333;
     color: white;
-    padding: 10px 20px;
-    text-align: center;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
 }
