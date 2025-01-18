@@ -87,12 +87,14 @@
 /* Contenido Principal */
 .main-content {
     padding: 40px 20px;
-    background-color: #333; /* Fondo gris oscuro */
-    color: white;
+    background: linear-gradient(to right, #2E2E2E, #1C1C1C); /* Fondo degradado gris oscuro */
+    color: #EAEAEA; /* Texto en gris claro */
     display: flex;
     justify-content: space-between;
     gap: 20px;
     flex-wrap: wrap; /* Ajusta en pantallas pequeñas */
+    border-radius: 10px; /* Bordes suaves */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Sombra para mayor profundidad */
 }
 
 .main-content .text {
@@ -109,6 +111,7 @@
 .main-content .text p {
     font-size: 1rem;
     line-height: 1.5;
+    color: #EAEAEA; /* Mantén el texto legible en gris claro */
 }
 
 .main-content .image {
@@ -120,6 +123,7 @@
     width: 100%;
     border-radius: 10px;
     object-fit: cover;
+    border: 2px solid #444; /* Borde gris oscuro */
 }
 
 /* Pie de página */
