@@ -1,22 +1,13 @@
-let currentIndex = 0;
+document.addEventListener('DOMContentLoaded', () => {
+    const carousel = document.querySelector('.carousel');
+    const images = document.querySelectorAll('.carousel img');
+    let currentIndex = 0;
 
-const carouselImages = document.querySelectorAll('.carousel img');
-const totalImages = carouselImages.length;
+    function moveCarousel() {
+        currentIndex = (currentIndex + 1) % images.length;
+        const offset = -currentIndex * 100; // Mueve el carrusel
+        carousel.style.transform = `translateX(${offset}%)`;
+    }
 
-function showNextImage() {
-    currentIndex = (currentIndex + 1) % totalImages;
-    updateCarouselPosition();
-}
-
-function showPrevImage() {
-    currentIndex = (currentIndex - 1 + totalImages) % totalImages;
-    updateCarouselPosition();
-}
-
-function updateCarouselPosition() {
-    const offset = -currentIndex * 100; // Desplaza las imágenes hacia la izquierda
-    document.querySelector('.carousel').style.transform = `translateX(${offset}%)`;
-}
-
-// Cambiar imagen cada 3 segundos
-setInterval(showNextImage, 3000);
+    setInterval(moveCarousel, 3000); // Cambia cada 3 segundos
+});
