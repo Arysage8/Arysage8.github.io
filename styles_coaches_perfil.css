@@ -1,0 +1,77 @@
+/* General */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    background-color: #222;
+    color: #f5f5f5;
+}
+
+h1, h2, p {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Header */
+.header {
+    background-color: #FF495C;
+    text-align: center;
+}
+.header .logo a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+}
+/* Perfil del Coach */
+.main-coach-profile {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #333;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    color: #f5f5f5;
+}
+
+.main-coach-profile h2 {
+    font-size: 2em;
+    margin-bottom: 15px;
+    color: #FF495C;
+}
+
+.main-coach-profile img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    border: 5px solid #FF495C;
+}
+
+.main-coach-profile p {
+    font-size: 1em;
+    line-height: 1.6;
+    margin: 10px 0;
+}
+
+.main-coach-profile strong {
+    color: #FF495C;
+}
+
+.main-coach-profile .btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    color: #ffffff;
+    background-color: #FF495C;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.main-coach-profile .btn:hover {
+    background-color: #FF6375;
+}

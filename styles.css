@@ -1,0 +1,187 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f5f5f5;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Barra superior */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FF495C;
+    padding: 20px;
+}
+
+.header .logo h1 {
+    color: white;
+    font-size: 1.5em;
+}
+
+.header .profile a {
+    color: white;
+    font-size: 1em;
+    padding: 10px 20px;
+    background-color: #333;
+    border-radius: 5px;
+}
+
+.header .profile a:hover {
+    background-color: #555;
+}
+
+/* Barra de navegación */
+.navbar {
+    background-color: #222; /* Color de fondo */
+    height: 60px; /* Incrementa la altura */
+    display: flex;
+    justify-content: flex-end; /* Posiciona las opciones a la derecha */
+    align-items: center; /* Centra verticalmente los elementos */
+    padding: 0 20px; /* Espaciado horizontal */
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 20px; /* Espaciado entre elementos */
+    margin: 0;
+    padding: 0;
+}
+
+.navbar a {
+    text-decoration: none;
+    font-size: 1rem;
+    font-style: italic;
+    padding: 0 50px;
+    color: #fff; /* Color de texto por defecto */
+    transition: color 0.3s ease; /* Efecto suave al cambiar color */
+}
+
+.navbar a:hover {
+    color: #FF495C; /* Cambia al color rojo/rosa */
+}
+
+
+/* Carrusel */
+.carousel-container {
+    width: 100%;
+    overflow: hidden; /* Asegura que solo se muestre una imagen a la vez */
+    position: relative;
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease;
+    width: 100%; /* Se asegura que el carrusel ocupe todo el ancho */
+}
+
+.carousel img {
+    min-width: 100%; /* Cada imagen ocupa el 100% del ancho del contenedor */
+    height: auto;    /* Ajusta la altura de manera proporcional */
+    object-fit: cover; /* Asegura que la imagen se recorte correctamente */
+}
+
+
+/* Estilos para main-content */
+.main-content {
+    background-color: #1e1e1e; /* Fondo oscuro */
+    color: #fff; /* Texto blanco */
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+/* Secciones */
+.info-section {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin: 1rem auto;
+    max-width: 1200px;
+}
+
+/* Texto */
+.info-text {
+    flex: 1;
+    max-width: 500px;
+}
+
+.info-text h2 {
+    font-size: 2rem;
+    color: #FF495C; /* Tono rosa rojizo */
+    margin-bottom: 1rem;
+}
+
+.info-text p {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #e0e0e0; /* Gris claro */
+}
+
+/* Imagen */
+.info-image {
+    flex: 1;
+    max-width: 500px;
+}
+
+.info-image img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .info-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .info-text, .info-image {
+        max-width: 100%;
+    }
+}
+
+
+/* Pie de página */
+.footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.profile a {
+    text-decoration: none;
+    font-size: 1rem;
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+.profile a:hover {
+    color: #FF495C; /* Cambia color al pasar el mouse */
+}
+
+.profile .icon {
+    width: 24px;
+    height: 24px;
+}

@@ -1,0 +1,75 @@
+/* Estilos generales */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Contenedor principal de pago confirmado */
+#paymentMessage {
+    background-color: #ffffff;
+    padding: 20px;
+    max-width: 600px;
+    margin: 40px auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Mensaje de éxito */
+#paymentMessage p {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+/* Estilo para el enlace del ticket */
+#paymentMessage a {
+    text-decoration: none;
+    color: #FF495C;
+    font-weight: bold;
+    font-size: 1.1rem;
+    display: inline-block;
+    margin-top: 15px;
+    transition: color 0.3s ease;
+}
+
+#paymentMessage a:hover {
+    color: #D4394C; /* Color más oscuro para el hover */
+}
+
+/* Estilo para el contenedor del ticket (enlace a la imagen o página de ticket) */
+.ticket-container {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.ticket-details p {
+    font-size: 1.1rem;
+    margin: 10px 0;
+    color: #333;
+}
+
+.ticket-container h2 {
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.ticket-image {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+    border-radius: 8px;
+}
+
+/* Estilo para el texto del ticket en la página de compra */
+.ticket-details {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-top: 20px;
+}

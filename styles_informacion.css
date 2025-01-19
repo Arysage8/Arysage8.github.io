@@ -1,0 +1,87 @@
+/* Estilos generales */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Estilo del header */
+.header {
+    background-color: #FF495C;
+    text-align: center;
+}
+
+.header h1 {
+    margin: 0;
+}
+
+.header .logo a {
+    text-decoration: none;
+    color: white;
+    padding: 20px;
+}
+
+/* Estilo del contenido principal */
+.main-content {
+    padding: 40px 20px;
+}
+
+.team-section {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.team-section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Contenedor de los miembros del equipo */
+.team-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* Estilo de cada miembro */
+.team-member {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 250px;
+}
+
+.team-member img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.team-member h3 {
+    font-size: 1.4rem;
+    color: #333;
+    margin: 10px 0;
+}
+
+.team-member p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Estilo del footer */
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}

@@ -1,0 +1,89 @@
+/* Estilos generales */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Estilo del header */
+.header {
+    background-color: #FF495C;
+    text-align: center;
+}
+
+.header h1 {
+    margin: 0;
+}
+
+.header .logo a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+}
+
+/* Estilo del contenido principal */
+.main-content {
+    padding: 40px 20px;
+}
+
+.tournaments-section {
+    text-align: center;
+}
+
+.tournaments-section h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+.tournament-card {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+    text-align: left;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.tournament-card h3 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.tournament-card p {
+    font-size: 1rem;
+    color: #666;
+    margin: 5px 0;
+}
+
+.register-btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #FF495C;
+    color: white;
+    font-size: 1rem;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.register-btn:hover {
+    background-color: #e03c4d;
+}
+
+/* Estilo del footer */
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}

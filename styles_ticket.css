@@ -1,0 +1,14 @@
+.ticket-container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 2px solid #333;
+    border-radius: 10px;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+.ticket-details p {
+    font-size: 1.1rem;
+    margin: 10px 0;
+}

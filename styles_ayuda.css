@@ -1,0 +1,77 @@
+/* Estilos generales */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Estilo del header */
+.header {
+    background-color: #FF495C;
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+
+.header h1 {
+    margin: 0;
+}
+
+.header a {
+    text-decoration: none;
+    color: white;
+}
+
+/* Estilo del contenido principal */
+.main-content {
+    padding: 40px 20px;
+}
+
+.help-section {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.help-section h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.help-section p {
+    font-size: 1.2rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+.faq {
+    margin: 20px 0;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.faq h3 {
+    font-size: 1.6rem;
+    color: #333;
+}
+
+.faq p {
+    font-size: 1rem;
+    color: #666;
+    margin-top: 10px;
+}
+
+/* Estilo del footer */
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
