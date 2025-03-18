@@ -3,55 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pagar por el Servicio</title>
+    <title>Pagar con PayPal</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles_pago.css">
 </head>
 <body>
-    <!-- Contenido Principal de Pago -->
     <main class="payment-container">
         <h2>Simulación de Pago</h2>
-        <p>Por favor, ingresa los datos de tu tarjeta para completar el pago.</p>
+        <p>Selecciona un método de pago.</p>
         
         <div class="payment-form">
-            <form id="paymentForm">
-                <label for="nombre">Nombre Completo:</label>
-                <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre" required>
-
-                <label for="tipo-tarjeta">Tipo de Tarjeta:</label>
-                <select id="tipo-tarjeta" name="tipo-tarjeta" required>
-                    <option value="debito">Débito</option>
-                    <option value="credito">Crédito</option>
-                </select>
-
-                <label for="numero-tarjeta">Número de Tarjeta:</label>
-                <input type="text" id="numero-tarjeta" name="numero-tarjeta" placeholder="XXXX XXXX XXXX XXXX" required maxlength="16">
-
-                <label for="fecha-expiracion">Fecha de Expiración:</label>
-                <input type="month" id="fecha-expiracion" name="fecha-expiracion" required>
-
-                <label for="codigo-seguridad">Código de Seguridad (CVV):</label>
-                <input type="text" id="codigo-seguridad" name="codigo-seguridad" placeholder="XXX" required maxlength="3">
-
-                <div class="payment-details">
-                    <p><strong>Costo:</strong> $20 USD</p>
-                    <button type="submit" class="btn-submit">Confirmar Pago</button>
-                </div>
-            </form>
-            <div id="paymentMessage" style="display:none;">
-                <p><strong>Pago Confirmado!</strong> Gracias por tu compra.</p>
-                <a href="pago_confirmado.html">Ver Detalles</a>
-            </div>
+            <div id="paypal-button-container"></div>
         </div>
     </main>
-
+    
+    <!-- SDK de PayPal con tu Client ID -->
+    <script src="https://www.paypal.com/sdk/js?client-id=Act3AxzLQ-Ls-Tt5fmVPpYZ3teQ5CpHDPqQis-O94uUKrJXujrqNP320uxjGzZmP3Q5gLy6Q_Kd2XAKJ&currency=USD"></script>
+    
     <script>
-        // Limitar la longitud de los campos de la tarjeta y el CVV
-        document.getElementById('numero-tarjeta').setAttribute('maxlength', '16');
-        document.getElementById('codigo-seguridad').setAttribute('maxlength', '3');
-        </script>
-        
-
-    <script src="script2.js"></script>
+        paypal.Buttons({
+            createOrder: function(data, actions) {
+                return actions.order.create({
+                    purchase_units: [{
+                        amount: {
+                            value: '1.00' // Monto del pago
+                        }
+                    }]
+                });
+            },
+            onApprove: function(data, actions) {
+                return actions.order.capture().then(function(details) {
+                    alert('Pago exitoso, gracias ' + details.payer.name.given_name);
+                    window.location.href = "pago_confirmado.html";
+                });
+            }
+        }).render('#paypal-button-container');
+    </script>
 </body>
 </html>
