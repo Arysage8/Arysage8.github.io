@@ -3,16 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pago Confirmado</title>
+    <title>Pagar con PayPal</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles_pago_confirmado.css">
+    <link rel="stylesheet" href="styles_pago.css">
 </head>
 <body>
-    <main class="payment-confirmed-container">
-        <div id="paymentMessage">
-            <p>¡Pago confirmado con éxito!</p>
-            <p>Tu pago ha sido procesado correctamente. <a href="ticket.html" target="_blank">Ver tu ticket de compra</a></p>
-        </div>        
+    <main class="payment-container">
+        <h2>Simulación de Pago</h2>
+        <p>Selecciona un método de pago.</p>
+        
+        <div class="payment-form">
+            <div id="paypal-button-container"></div>
+        </div>
     </main>
+    
+    <!-- SDK de PayPal con tu Client ID -->
+    <script src="https://www.paypal.com/sdk/js?client-id=Act3AxzLQ-Ls-Tt5fmVPpYZ3teQ5CpHDPqQis-O94uUKrJXujrqNP320uxjGzZmP3Q5gLy6Q_Kd2XAKJ&currency=USD"></script>
+    
+    <script>
+        paypal.Buttons({
+            createOrder: function(data, actions) {
+                return actions.order.create({
+                    purchase_units: [{
+                        amount: {
+                            value: '20.00' // Monto del pago
+                        }
+                    }]
+                });
+            },
+            onApprove: function(data, actions) {
+                return actions.order.capture().then(function(details) {
+                    alert('Pago exitoso, gracias ' + details.payer.name.given_name);
+                    window.location.href = "pago_confirmado.html";
+                });
+            }
+        }).render('#paypal-button-container');
+    </script>
 </body>
 </html>
