@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Condiciones del Servicio - Mi App</title>
+</head>
+<body>
+  <h1>Condiciones del Servicio</h1>
+  <p>Al utilizar nuestra aplicación, aceptas las siguientes condiciones:</p>
+  <ul>
+    <li>No se permite el uso de la aplicación para actividades ilegales.</li>
+    <li>La aplicación puede recopilar datos técnicos necesarios para su funcionamiento.</li>
+    <li>Nos reservamos el derecho de modificar o interrumpir los servicios en cualquier momento.</li>
+    <li>El uso continuado de la aplicación implica tu aceptación de las modificaciones.</li>
+  </ul>
+  <p>Si tienes alguna duda, por favor, contacta con nosotros en: contacto@miapp.com</p>
+</body>
+</html>
