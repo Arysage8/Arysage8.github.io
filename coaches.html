@@ -11,7 +11,7 @@
     <!-- Header -->
     <header class="header">
         <div class="logo">
-           <a href="index.html"><h1>Gaming Coaches</h1></a>
+           <a href="index.html"><h1>GameNest Academy</h1></a>
         </div>
     </header>
 
@@ -23,31 +23,83 @@
             <div class="coach-card">
                 <img src="images/coach1.jpg" alt="Coach 1">
                 <h3>Juan Pérez</h3>
-                <p>Especialista en FPS y estrategia. 5 años de experiencia.</p>
-                <a href="coach1.html" class="btn">Ver Perfil</a>
+                <p class="coach-description">Especialista en FPS y estrategia. 5 años de experiencia entrenando equipos en torneos internacionales. Precio: $20/hora.</p>
+                <div class="coach-actions">
+                    <a href="coach1.html" class="btn">Ver Perfil</a>
+                    <div class="cart-input">
+                        <input type="number" id="hours-juan" min="1" value="1" aria-label="Cantidad de horas para Juan Pérez">
+                        <button class="add-to-cart-btn" onclick="addToCart('Juan Pérez', 20, document.getElementById('hours-juan').value)">Añadir al Carrito</button>
+                    </div>
+                </div>
             </div>
 
             <!-- Coach 2 -->
             <div class="coach-card">
                 <img src="images/coach2.jpg" alt="Coach 2">
                 <h3>María López</h3>
-                <p>Experta en MOBAs y análisis de partidas.</p>
-                <a href="coach2.html" class="btn">Ver Perfil</a>
+                <p class="coach-description">Experta en MOBAs y análisis de partidas. Precio: $30/hora.</p>
+                <div class="coach-actions">
+                    <a href="coach2.html" class="btn">Ver Perfil</a>
+                    <div class="cart-input">
+                        <input type="number" id="hours-maria" min="1" value="1" aria-label="Cantidad de horas para María López">
+                        <button class="add-to-cart-btn" onclick="addToCart('María López', 30, document.getElementById('hours-maria').value)">Añadir al Carrito</button>
+                    </div>
+                </div>
             </div>
 
             <!-- Coach 3 -->
             <div class="coach-card">
                 <img src="images/coach3.jpg" alt="Coach 3">
                 <h3>Carlos Gómez</h3>
-                <p>Entrenador en Battle Royales y tácticas avanzadas.</p>
-                <a href="coach3.html" class="btn">Ver Perfil</a>
+                <p class="coach-description">Entrenador en Battle Royales y tácticas avanzadas. Precio: $15/hora.</p>
+                <div class="coach-actions">
+                    <a href="coach3.html" class="btn">Ver Perfil</a>
+                    <div class="cart-input">
+                        <input type="number" id="hours-carlos" min="1" value="1" aria-label="Cantidad de horas para Carlos Gómez">
+                        <button class="add-to-cart-btn" onclick="addToCart('Carlos Gómez', 15, document.getElementById('hours-carlos').value)">Añadir al Carrito</button>
+                    </div>
+                </div>
             </div>
         </div>
+
+        <!-- Sección de Reseñas -->
+        <section class="reviews-section">
+            <h3>Opiniones de Nuestros Clientes</h3>
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <h4>Ana Martínez</h4>
+                    <p class="review-text">"¡Juan Pérez me ayudó a mejorar mi aim en FPS! Totalmente vale la pena."</p>
+                    <div class="star-rating">★★★★★</div>
+                </div>
+                <div class="review-card">
+                    <h4>Luis García</h4>
+                    <p class="review-text">"María es una experta en MOBAs, aprendí muchísimo sobre posicionamiento."</p>
+                    <div class="star-rating">★★★★☆</div>
+                </div>
+                <div class="review-card">
+                    <h4>Sofía Rodríguez</h4>
+                    <p class="review-text">"Carlos es genial para Battle Royales, ¡mis partidas ahora son más consistentes!"</p>
+                    <div class="star-rating">★★★★★</div>
+                </div>
+            </div>
+        </section>
     </main>
+
+    <!-- Botón flotante del carrito -->
+    <div class="floating-cart">
+        <a href="cart.html" class="cart-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" class="cart-icon" viewBox="0 0 0 20 20" fill="currentColor">
+                <path d="M3 1 a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15 a1 0 000-2H6.414l1-1H14 a1 0 00.894-.553l3-6A1 0 0017 3H6.28l-.31-1.243A1 0 005 1H3zM16 16.5 a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18 a1.5 1.5 0 100-3 1.5 1.5 0 000 3z" />
+            </svg>
+            <span id="cart-count">0</span>
+        </a>
+    </div>
 
     <!-- Footer -->
     <footer class="footer">
         <p>© 2025 GameNest Academy. Todos los derechos reservados.</p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>

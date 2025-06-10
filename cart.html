@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras - GameNest Academy</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="cart.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">
+            <a href="index.html"><h1>GameNest Academy</h1></a>
+        </div>
+    </header>
+
+    <!-- Contenido Principal -->
+    <main class="main-cart">
+        <h2>Tu Carrito de Compras</h2>
+        <div id="cart-items" class="cart-items"></div>
+        <div class="cart-summary">
+            <h3 id="cart-total">Total: $0 USD</h3>
+            <button class="checkout-btn" onclick="checkout()">Proceder al Pago</button>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>© 2025 GameNest Academy. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', renderCart);
+    </script>
+</body>
+</html>

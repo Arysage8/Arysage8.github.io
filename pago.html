@@ -8,36 +8,90 @@
     <link rel="stylesheet" href="styles_pago.css">
 </head>
 <body>
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">
+            <a href="index.html"><h1>GameNest Academy</h1></a>
+        </div>
+    </header>
+
+    <!-- Contenido -->
     <main class="payment-container">
         <h2>Simulación de Pago</h2>
-        <p>Selecciona un método de pago.</p>
-        
+        <p id="payment-total">Total a pagar: $0 USD</p>
         <div class="payment-form">
             <div id="paypal-button-container"></div>
+            <p id="paypal-loading" style="color: #f5f5f5; text-align: center;">Cargando botón de PayPal...</p>
+            <p id="paypal-error" style="color: #e03c4d; display: none;">Error al cargar el botón de PayPal. Por favor, verifica tu conexión o el Client ID.</p>
         </div>
     </main>
-    
-    <!-- SDK de PayPal con tu Client ID -->
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>© 2025 GameNest Academy. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- SDK de PayPal -->
     <script src="https://www.paypal.com/sdk/js?client-id=Act3AxzLQ-Ls-Tt5fmVPpYZ3teQ5CpHDPqQis-O94uUKrJXujrqNP320uxjGzZmP3Q5gLy6Q_Kd2XAKJ&currency=USD"></script>
     
+    <script src="script.js"></script>
     <script>
-        paypal.Buttons({
-            createOrder: function(data, actions) {
-                return actions.order.create({
-                    purchase_units: [{
-                        amount: {
-                            value: '0.01' // Monto del pago
-                        }
-                    }]
-                });
-            },
-            onApprove: function(data, actions) {
-                return actions.order.capture().then(function(details) {
-                    alert('Pago exitoso, gracias ' + details.payer.name.given_name);
-                    window.location.href = "pago_confirmado.html";
-                });
+        document.addEventListener('DOMContentLoaded', () => {
+            const total = parseFloat(localStorage.getItem('cartTotal') || '0').toFixed(2);
+            const paymentTotal = document.getElementById('payment-total');
+            const paypalLoading = document.getElementById('paypal-loading');
+            const paypalError = document.getElementById('paypal-error');
+            
+            if (paymentTotal) {
+                paymentTotal.textContent = `Total a pagar: $${total} USD`;
             }
-        }).render('#paypal-button-container');
+
+            // Verificar si el SDK de PayPal está cargado
+            if (typeof paypal === 'undefined') {
+                console.error('Error: PayPal SDK no se cargó correctamente. Verifica el Client ID y la URL del SDK.');
+                if (paypalLoading) paypalLoading.style.display = 'none';
+                if (paypalError) paypalError.style.display = 'block';
+                return;
+            }
+
+            try {
+                paypal.Buttons({
+                    createOrder: function(data, actions) {
+                        return actions.order.create({
+                            purchase_units: [{
+                                amount: {
+                                    value: total,
+                                    currency_code: 'USD'
+                                }
+                            }]
+                        });
+                    },
+                    onApprove: function(data, actions) {
+                        return actions.order.capture().then(function(details) {
+                            localStorage.removeItem('cart');
+                            localStorage.removeItem('cartTotal');
+                            updateCartCount();
+                            alert('Pago exitoso, gracias ' + (details.payer.name.given_name || ''));
+                            window.location.href = 'pago_confirmado.html';
+                        });
+                    },
+                    onError: function(err) {
+                        console.error('Error en el proceso de pago con PayPal:', err);
+                        if (paypalError) paypalError.style.display = 'block';
+                    }
+                }).render('#paypal-button-container').then(() => {
+                    if (paypalLoading) paypalLoading.style.display = 'none';
+                }).catch(err => {
+                    console.error('Error al renderizar el botón de PayPal:', err);
+                    if (paypalLoading) paypalLoading.style.display = 'none';
+                    if (paypalError) paypalError.style.display = 'block';
+                });
+            } catch (err) {
+                console.error('Error al iniciar PayPal Buttons:', err);
+                if (paypalLoading) paypalLoading.style.display = 'none';
+                if (paypalError) paypalError.style.display = 'block';
+            }
+        });
     </script>
 </body>
 </html>

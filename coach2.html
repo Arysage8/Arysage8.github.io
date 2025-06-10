@@ -11,7 +11,7 @@
     <!-- Header -->
     <header class="header">
         <div class="logo">
-            <a href="coaches.html"><h1>Gaming Coaches</h1></a>
+            <a href="index.html"><h1>GameNest Academy</h1></a>
         </div>
     </header>
 
@@ -19,11 +19,42 @@
     <main class="main-coach-profile">
         <h2>María López</h2>
         <img src="images/coach2.jpg" alt="María López">
-        <p>Experta en MOBAs y análisis de partidas.</p>
-        <p><strong>Precio por hora:</strong> $30 USD</p>
-        <p><strong>Idiomas:</strong> Español, Inglés, Ruso</p>
-        <a href="pago.html" class="btn">Contratar</a>
+        <div class="coach-description">
+            <p>Experta en MOBAs y análisis de partidas. 8 años de experiencia en coaching competitivo.</p>
+            <p><strong>Precio por hora:</strong> $30 USD</p>
+            <p><strong>Idiomas:</strong> Español, Inglés, Ruso</p>
+        </div>
+        <div class="coach-actions">
+            <div class="cart-input">
+                <input type="number" id="hours-maria" min="1" value="1" aria-label="Cantidad de horas para María López">
+                <button class="add-to-cart-btn" onclick="addToCart('María López', 30, document.getElementById('hours-maria').value)">Añadir al Carrito</button>
+            </div>
+            <a href="pago.html" class="btn">Contratar Ahora</a>
+        </div>
+
+        <!-- Sección de Reseñas -->
+        <section class="reviews-section">
+            <h3>Opiniones de Clientes</h3>
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <h4>Luis García</h4>
+                    <p class="review-text">"María me ayudó a entender mejor el posicionamiento en MOBAs."</p>
+                    <div class="star-rating">★★★★☆</div>
+                </div>
+                <div class="review-card">
+                    <h4>Clara Fernández</h4>
+                    <p class="review-text">"Su análisis de partidas es súper detallado, ¡recomendadísima!"</p>
+                    <div class="star-rating">★★★★★</div>
+                </div>
+            </div>
+        </section>
     </main>
 
+    <!-- Footer -->
+    <footer class="footer">
+        <p>© 2025 GameNest Academy. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>

@@ -7,12 +7,15 @@
     <link rel="stylesheet" href="styles_usuario_perfil.css">
 </head>
 <body>
-
     <!-- Header -->
     <header class="header">
-        <div class="logo">
-            <a href="index.html"><h1>Mi Perfil</h1></a>
-        </div>
+        <a href="index.html" class="logo-container">
+            <img src="images/logo.jpg" alt="GameNest Academy Logo" class="logo-img">
+            <div class="logo-text">
+                <h1>GameNest Academy</h1>
+                <p class="slogan">Tu camino al éxito en el gaming</p>
+            </div>
+        </a>
     </header>
 
     <!-- Contenido Principal -->
@@ -23,21 +26,22 @@
                     <img src="images/ivan.jpg" alt="Foto de Usuario">
                 </div>
                 <div class="profile-info">
-                    <h2>Ivan Tonathiu Lopez Rosales</h2>
-                    <p><strong>Email:</strong> ivan@example.com</p>
-                    <p><strong>Teléfono:</strong> +1 234 567 890</p>
-                    <p><strong>Ubicación:</strong> Ciudad de México</p>
-                    <p><strong>Miembro desde:</strong> Enero 2025</p>
-                    <button class="logout-btn">Cerrar Sesión</button>
+                    <h2 id="profileName">Ivan Tonathiu Lopez Rosales</h2>
+                    <p><strong>Email:</strong> <span id="profileEmail">ivan@example.com</span></p>
+                    <p><strong>Teléfono:</strong> <span id="profilePhone">+1 234 567 890</span></p>
+                    <p><strong>Ubicación:</strong> <span id="profileLocation">Ciudad de México</span></p>
+                    <p><strong>Miembro desde:</strong> <span id="profileJoinDate">Enero 2025</span></p>
+                    <button class="logout-btn" onclick="logout()">Cerrar Sesión</button>
                 </div>
             </div>
         </section>
     </main>
 
-    <!-- Footer (opcional) -->
+    <!-- Footer -->
     <footer class="footer">
         <p>© 2025 GameNest Academy. Todos los derechos reservados.</p>
     </footer>
 
+    <script src="script.js"></script>
 </body>
 </html>

@@ -11,7 +11,7 @@
     <!-- Header -->
     <header class="header">
         <div class="logo">
-            <a href="coaches.html"><h1>Gaming Coaches</h1></a>
+            <a href="index.html"><h1>GameNest Academy</h1></a>
         </div>
     </header>
 
@@ -19,11 +19,42 @@
     <main class="main-coach-profile">
         <h2>Carlos Gómez</h2>
         <img src="images/coach3.jpg" alt="Carlos Gómez">
-        <p>Entrenador en Battle Royales y tácticas avanzadas.</p>
-        <p><strong>Precio por hora:</strong> $25 USD</p>
-        <p><strong>Idiomas:</strong> Español, Inglés</p>
-        <a href="pago.html" class="btn">Contratar</a>
+        <div class="coach-description">
+            <p>Entrenador en Battle Royales y tácticas avanzadas. 6 años de experiencia en coaching.</p>
+            <p><strong>Precio por hora:</strong> $15 USD</p>
+            <p><strong>Idiomas:</strong> Español, Inglés</p>
+        </div>
+        <div class="coach-actions">
+            <div class="cart-input">
+                <input type="number" id="hours-carlos" min="1" value="1" aria-label="Cantidad de horas para Carlos Gómez">
+                <button class="add-to-cart-btn" onclick="addToCart('Carlos Gómez', 15, document.getElementById('hours-carlos').value)">Añadir al Carrito</button>
+            </div>
+            <a href="pago.html" class="btn">Contratar Ahora</a>
+        </div>
+
+        <!-- Sección de Reseñas -->
+        <section class="reviews-section">
+            <h3>Opiniones de Clientes</h3>
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <h4>Sofía Rodríguez</h4>
+                    <p class="review-text">"Carlos mejoró mi toma de decisiones en Battle Royales."</p>
+                    <div class="star-rating">★★★★★</div>
+                </div>
+                <div class="review-card">
+                    <h4>Jorge Morales</h4>
+                    <p class="review-text">"Buen coach, pero me gustaría más práctica en vivo."</p>
+                    <div class="star-rating">★★★★☆</div>
+                </div>
+            </div>
+        </section>
     </main>
 
+    <!-- Footer -->
+    <footer class="footer">
+        <p>© 2025 GameNest Academy. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>

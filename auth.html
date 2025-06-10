@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autenticación - GameNest Academy</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="auth.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <a href="index.html" class="logo-container">
+            <img src="images/logo.jpg" alt="GameNest Academy Logo" class="logo-img">
+            <div class="logo-text">
+                <h1>GameNest Academy</h1>
+                <p class="slogan">Tu camino al éxito en el gaming.</p>
+            </div>
+        </a>
+        <div class="header-right">
+            <div class="search-container">
+                <input type="search" id="searchios" placeholder="Buscar..." aria-label="Buscar en el sitio">
+                <button class="search-btn" onclick="handleSearch()">🔍</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Login Modal -->
+        <div class="modal" id="loginModal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('loginModal')">×</span>
+                <h2>Iniciar Sesión</h2>
+                <form id="loginForm" onsubmit="handleLogin(event)">
+                    <div class="form-group">
+                        <label for="loginEmail">Correo Electrónico</label>
+                        <input type="email" id="loginEmail" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="loginPassword">Contraseña</label>
+                        <input type="password" id="loginPassword" name="password" required>
+                    </div>
+                    <button type="submit" class="submit-btn">Iniciar Sesión</button>
+                </form>
+                <p>¿No tienes cuenta? <a href="auth.html?action=register">Regístrate aquí</a></p>
+            </div>
+        </div>
+
+        <!-- Register Modal -->
+        <div class="modal" id="registerModal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('registerModal')">×</span>
+                <h2>Registrarse</h2>
+                <form id="registerForm" onsubmit="handleRegister(event)">
+                    <div class="form-group">
+                        <label for="registerName">Nombre</label>
+                        <input type="text" id="registerName" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="registerEmail">Correo Electrónico</label>
+                        <input type="email" id="registerEmail" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="registerPassword">Contraseña</label>
+                        <input type="password" id="registerPassword" name="password" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="registerPhone">Teléfono</label>
+                        <input type="tel" id="registerPhone" name="phone">
+                    </div>
+                    <div class="form-group">
+                        <label for="registerLocation">Ubicación</label>
+                        <input type="text" id="registerLocation" name="location">
+                    </div>
+                    <button type="submit" class="submit-btn">Registrarse</button>
+                </form>
+                <p>¿Ya tienes cuenta? <a href="auth.html?action=login">Inicia sesión aquí</a></p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Botón flotante del carrito -->
+    <div class="floating-cart">
+        <a href="cart.html" class="cart-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" class="cart-icon" viewBox="0 0 20 20" fill="currentColor">
+                <path d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z" />
+            </svg>
+            <span id="cart-count">0</span>
+        </a>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>© 2025 GameNest Academy. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
